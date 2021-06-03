@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88.973" height="51.539" viewBox="0 0 88.973 51.539">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 15px;
+      }
+    </style>
+  </defs>
+  <g id="Down_Arrow" data-name="Down Arrow" class="cls-1" transform="translate(-3903.197 627.803)">
+    <line id="Line_5" data-name="Line 5" class="cls-2" x2="40.932" y2="40.932" transform="translate(3908.5 -622.5)"/>
+    <line id="Line_6" data-name="Line 6" class="cls-2" x1="40.932" y2="40.932" transform="translate(3939 -622.5)"/>
+  </g>
+</svg>
