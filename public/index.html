@@ -1,134 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+		<!-- Dynamic Favicons and Manifest.json -->
+		<link rel="shortcut icon" id="favicon" href="%PUBLIC_URL%/favicon.ico" />
+		<link rel="manifest" id="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+		<!-- Dynamic Script -->
+		<script>
+			const usesDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches || false;
+			const favicon = document.getElementById("favicon");
+			const manifest = document.getElementById("manifest");
+
+			function switchIcon(usesDarkMode) {
+				if (usesDarkMode) {
+					favicon.href = "%PUBLIC_URL%/favicon.ico";
+					manifest.href = "%PUBLIC_URL%/manifest.json";
+				} else {
+					favicon.href = "%PUBLIC_URL%/favicon-dark.ico";
+					manifest.href = "%PUBLIC_URL%/manifest-dark.json";
+				}
+			}
+
+			window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => switchIcon(e.matches));
+			switchIcon(usesDarkMode);
+		</script>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-		<meta name="description" content="Web site created using create-react-app" />
+		<meta name="description" content="Portfolio for STron" />
 		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-		<!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-		<!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="HandheldFriendly" content="true" />
+		<title>STron</title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-		<title>React App</title>
+		<script type="text/javascript">
+			(function (l) {
+				if (l.search[1] === "/") {
+					var decoded = l.search
+						.slice(1)
+						.split("&")
+						.map(function (s) {
+							return s.replace(/~and~/g, "&");
+						})
+						.join("?");
+					window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+				}
+			})(window.location);
+		</script>
 	</head>
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
-		<!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script>
-			gsap.registerPlugin(ScrollTrigger);
-
-			var tl = gsap.timeline();
-
-			tl.to(".hero-heading", {
-				y: 75,
-				opacity: 1,
-				ease: Power3.easeInOut,
-			});
-			tl.from(".text-vertical-90", 1.5, {
-				x: -100,
-				opacity: 0,
-				ease: Power3.easeInOut,
-			});
-			tl.from(
-				".text-vertical--90",
-				1.5,
-				{
-					x: 100,
-					opacity: 0,
-					ease: Power3.easeInOut,
-				},
-				"-=1.5"
-			);
-			tl.from(".up-down", {
-				y: -100,
-				opacity: 0,
-				ease: Power3.easeInOut,
-			});
-
-			// About
-
-			gsap.from(".about h3", 1.5, {
-				scrollTrigger: ".about h3",
-				y: -100,
-				opacity: 0,
-				ease: Power3.easeInOut,
-			});
-			gsap.from(".about p", 1.5, {
-				scrollTrigger: ".about p",
-				y: 50,
-				opacity: 0,
-				ease: Power3.easeInOut,
-			});
-		</script>
-
-		<script>
-			var tl = gsap.timeline();
-
-			tl.from(".skill-head", 1.25, {
-				y: -75,
-				opacity: 0,
-				ease: Power3.easeInOut,
-			});
-			tl.from(".skill", 1, {
-				y: -50,
-				opacity: 0,
-				stagger: 1,
-				ease: Power3.easeInOut,
-			});
-
-			tl.from(
-				".skill .progress",
-				1,
-				{
-					width: 0,
-					stagger: 1,
-					ease: Power3.easeInOut,
-				},
-				"-=2"
-			);
-
-			tl.from(
-				".skill .progress h6",
-				1,
-				{
-					opacity: 0,
-					stagger: 1,
-					ease: Power3.easeInOut,
-				},
-				"-=3"
-			);
-
-			// Home / Back
-			tl.from(".bthome", 1.25, {
-				x: -100,
-				opacity: 0,
-				ease: Power3.easeInOut,
-			});
-		</script> -->
 	</body>
 </html>
