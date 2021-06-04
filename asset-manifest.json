@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/newstronml/static/css/main.8be5647a.chunk.css",
-    "main.js": "/newstronml/static/js/main.96eeea6a.chunk.js",
-    "main.js.map": "/newstronml/static/js/main.96eeea6a.chunk.js.map",
-    "runtime-main.js": "/newstronml/static/js/runtime-main.3b7f84d5.js",
-    "runtime-main.js.map": "/newstronml/static/js/runtime-main.3b7f84d5.js.map",
-    "static/js/2.08c801a7.chunk.js": "/newstronml/static/js/2.08c801a7.chunk.js",
-    "static/js/2.08c801a7.chunk.js.map": "/newstronml/static/js/2.08c801a7.chunk.js.map",
-    "static/js/3.e8cb1ef2.chunk.js": "/newstronml/static/js/3.e8cb1ef2.chunk.js",
-    "static/js/3.e8cb1ef2.chunk.js.map": "/newstronml/static/js/3.e8cb1ef2.chunk.js.map",
-    "index.html": "/newstronml/index.html",
-    "static/css/main.8be5647a.chunk.css.map": "/newstronml/static/css/main.8be5647a.chunk.css.map",
-    "static/js/2.08c801a7.chunk.js.LICENSE.txt": "/newstronml/static/js/2.08c801a7.chunk.js.LICENSE.txt",
-    "static/media/Down Arrow.8bd9664c.svg": "/newstronml/static/media/Down Arrow.8bd9664c.svg"
+    "main.css": "/stron.ml/static/css/main.8be5647a.chunk.css",
+    "main.js": "/stron.ml/static/js/main.efaf4722.chunk.js",
+    "main.js.map": "/stron.ml/static/js/main.efaf4722.chunk.js.map",
+    "runtime-main.js": "/stron.ml/static/js/runtime-main.b99cd93c.js",
+    "runtime-main.js.map": "/stron.ml/static/js/runtime-main.b99cd93c.js.map",
+    "static/js/2.08c801a7.chunk.js": "/stron.ml/static/js/2.08c801a7.chunk.js",
+    "static/js/2.08c801a7.chunk.js.map": "/stron.ml/static/js/2.08c801a7.chunk.js.map",
+    "static/js/3.e8cb1ef2.chunk.js": "/stron.ml/static/js/3.e8cb1ef2.chunk.js",
+    "static/js/3.e8cb1ef2.chunk.js.map": "/stron.ml/static/js/3.e8cb1ef2.chunk.js.map",
+    "index.html": "/stron.ml/index.html",
+    "static/css/main.8be5647a.chunk.css.map": "/stron.ml/static/css/main.8be5647a.chunk.css.map",
+    "static/js/2.08c801a7.chunk.js.LICENSE.txt": "/stron.ml/static/js/2.08c801a7.chunk.js.LICENSE.txt",
+    "static/media/Down Arrow.8bd9664c.svg": "/stron.ml/static/media/Down Arrow.8bd9664c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3b7f84d5.js",
+    "static/js/runtime-main.b99cd93c.js",
     "static/js/2.08c801a7.chunk.js",
     "static/css/main.8be5647a.chunk.css",
-    "static/js/main.96eeea6a.chunk.js"
+    "static/js/main.efaf4722.chunk.js"
   ]
 }
